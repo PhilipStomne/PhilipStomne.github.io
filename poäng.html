@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet"type="text/css" href="poäng.css"/>
+<title>JavaScript</title>
+</head>
+
+
+<ul>
+  <li><a class="active" href="decalculate.html">HOME</a></li>
+  <li><a href="tiokamp.html">TIOKAMP</a></li>
+  <li><a href="sjukamp.html">SJUKAMP</a></li>
+  <li><a href="#about">POÄNG TILL RESULTAT</a></li>
+</ul>
+
+<h2>POÄNG TILL RESULTAT</h2>
+
+<div class="box">
+<table>
+  <tr>
+    <th>GREN</th>
+    <th>POÄNG</th>
+    <th>RESULTAT</th>
+  </tr>
+  
+  <tr>
+    <td>100m</td>
+    <td><input type = "number" id = "t" onChange = "tp()"></td>
+    <td><span id = "tp"></span><br></td>
+  </tr>
+  
+  <tr>
+    <td>Längdhopp</td>
+    <td><input type = "number" id = "lj" onChange = "ljp()"></td>
+    <td><span id = "ljp"></span><br></td>
+  </tr>
+  
+  <tr>
+    <td>Kulstötning</td>
+    <td><input type = "number" id = "sp" onChange = "spp()"></td>
+    <td><span id = "spp"></span><br></td>
+  </tr>
+  
+  <tr>
+    <td>Höjdhopp</td>
+    <td><input type = "number" id = "hj" onChange = "hjp()"></td>
+    <td><span id = "hjp"></span><br></td>
+  </tr>
+
+  <tr>
+    <td>400m</td>
+    <td><input type = "number" id = "fh" onChange = "fhp()"></td>
+    <td><span id = "fhp"></span><br></td>
+  </tr>
+  
+  <tr>
+    <td>110mh</td>
+    <td><input type = "number" id = "h" onChange = "hp()"></td>
+    <td><span id = "hp"></span><br></td>
+  </tr>
+  
+   <tr>
+    <td>Diskus</td>
+    <td><input type = "number" id = "dt" onChange = "dtp()"></td>
+    <td><span id = "dtp"></span><br></td>
+  </tr>
+  
+   <tr>
+    <td>Stavhopp</td>
+    <td><input type = "number" id = "pv" onChange = "pvp()"></td>
+    <td><span id = "pvp"></span><br></td>
+  </tr>
+  
+  <tr>
+    <td>Spjut</td>
+    <td><input type = "number" id = "jt" onChange = "jtp()"></td>
+    <td><span id = "jtp"></span><br></td>
+  </tr>
+
+  
+  </table>
+</div>	
+ 	
+
+
+
+	<script>
+	function tp(){
+	var t = document.getElementById("t").value;
+	var tp =  Number(18 - (t/25.4347) ** (1/1.81)).toFixed(2)
+	document.getElementById("tp").innerHTML = tp;
+	}
+	
+	function ljp(){
+	var lj = document.getElementById("lj").value;
+	var ljp = Number (((lj/0.14354)** (1/1.40) + 220)/100).toFixed(2)
+	document.getElementById("ljp").innerHTML = ljp;
+	}
+	
+	function spp(){
+	var sp = document.getElementById("sp").value;
+	var spp = Number ((sp/51.39)** (1/1.05) + 1.50).toFixed(2)
+	document.getElementById("spp").innerHTML = spp;
+	}
+	
+	function hjp(){
+	var hj = document.getElementById("hj").value;
+	var hjp = Number (((hj/0.8465)** (1/1.42) + 75.0)/100).toFixed(2)
+	document.getElementById("hjp").innerHTML = hjp;
+	}
+	
+	function fhp(){
+	var fh = document.getElementById("fh").value;
+	var fhp = Number((82 - (fh/1.53775)** (1/1.81))).toFixed(2)
+	document.getElementById("fhp").innerHTML = fhp;
+	}
+	
+	function hp(){
+	var h = document.getElementById("h").value;
+	var hp = Number(28.5 - (h/5.74352)** (1/1.92)).toFixed(2)
+	document.getElementById("hp").innerHTML = hp;
+	}
+	
+	function dtp(){
+	var dt = document.getElementById("dt").value;
+	var dtp = Number((dt/12.91)** (1/1.1) + 4.0).toFixed(2)
+	document.getElementById("dtp").innerHTML = dtp;
+	}
+	
+	function pvp(){
+	var pv = document.getElementById("pv").value;
+	var pvp = Number(((pv/0.2797)** (1/1.35) + 100)/100).toFixed(2)
+	document.getElementById("pvp").innerHTML = pvp;
+	}
+	
+	function jtp(){
+	var jt = document.getElementById("jt").value;
+	var jtp = Number((jt/10.14)** (1/1.08) + 7.0).toFixed(2)
+	document.getElementById("jtp").innerHTML = jtp;
+	}
+
+	
+	</script>
+	
+	
+	
+	</body>
+</html> 
